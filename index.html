@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti Noor Shaliha - Shaliha's Portfolio 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #007bff;
+            --accent-color: #ffc107;
+            --text-dark: #212529;
+            --text-light: #f8f9fa;
+            --bg-light: #f8f9fa;
+            --bg-dark: #343a40;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 0.3em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        section {
+            padding: 80px 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav {
+            background-color: var(--bg-dark);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            width: auto;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-light);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #fff;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            padding: 60px 5%;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+            color: #fff;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 10;
+            position: relative;
+        }
+
+        .hero-text-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+            z-index: 5;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-text-container p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .hero-text-container p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        #hero > p {
+            display: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            background-color: #ffd700;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .section-title:hover::after {
+            width: 120px;
+        }
+
+        #contact .section-title {
+            color: #fff;
+        }
+
+        #contact .section-title::after {
+            background-color: var(--accent-color);
+        }
+        
+        #about, #education {
+            background-color: var(--bg-light);
+            padding: 80px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #about .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .about-image-wrapper {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px solid var(--secondary-color);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image-wrapper:hover {
+            transform: scale(1.03);
+            border-color: var(--primary-color);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            border: none;
+            box-shadow: none;
+        }
+
+        .text-content {
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: justify;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .text-content:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+            background-color: #f0f8ff;
+        }
+
+        .text-content p {
+            margin-bottom: 1em;
+            color: #444;
+            font-size: 1.05em;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .skills-column {
+            flex: 1;
+            min-width: 280px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+
+        .skills-column:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .skills-column h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .skills-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .skills-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-column li {
+            background-color: var(--bg-light);
+            padding: 12px 18px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95em;
+            color: var(--text-dark);
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skills-column li:hover {
+            background-color: #e6e6fa;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .skills-column li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        #projects, #organization, #relawan {
+            background-color: #e6f7ff;
+            padding: 80px 5%;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .organization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .relawan-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5%;
+            box-sizing: border-box;
+        }
+
+        .relawan-grid .organization-card {
+            max-width: 380px;
+            width: 100%;
+        }
+
+        .project-card, .organization-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            position: relative;
+        }
+
+        .project-card:hover, .organization-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+        }
+
+        .project-image-container, .organization-image-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            overflow: hidden;
+        }
+
+        .project-card img, .organization-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-info, .organization-info {
+            padding: 25px;
+        }
+
+        .project-info h3, .organization-info h3 {
+            color: var(--text-dark);
+            font-size: 1.5em;
+            margin-bottom: 0.3em;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .project-info p, .organization-info p {
+            font-size: 0.95em;
+            color: #555;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #experience, #education {
+            background-color: #f8f9fa;
+            padding: 80px 5%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 45%;
+            text-align: left;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 2;
+        }
+
+        .timeline-item-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .timeline-item.left .timeline-item-content {
+            margin-right: auto;
+        }
+
+        .timeline-item.right .timeline-item-content {
+            margin-left: auto;
+        }
+
+        .timeline-item-content::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 20px;
+        }
+
+        .timeline-item.left .timeline-item-content::after {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #fff;
+            right: -10px;
+        }
+
+        .timeline-item.right .timeline-item-content::after {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff transparent transparent;
+            left: -10px;
+        }
+
+        .timeline-item-marker {
+            position: absolute;
+            top: 25px;
+            width: 25px;
+            height: 25px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            z-index: 3;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 0 5px rgba(0, 86, 179, 0.2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 3px;
+            font-size: 1.3em;
+        }
+
+        .timeline-item p.company {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p.duration {
+            font-size: 0.85em;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        #certifications {
+            background-color: #e6f7ff;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cert-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .cert-image-container {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 15px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .cert-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 3px;
+            font-size: 1.4em;
+        }
+
+        .cert-card p.issuer {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .cert-card p.date {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p.description {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .cert-card::before {
+            content: '★';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+            color: var(--accent-color);
+            opacity: 0.3;
+            transform: rotate(-15deg);
+            z-index: 0;
+        }
+
+        #contact {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #fff;
+            padding: 80px 5%;
+        }
+
+        #contact h2 {
+            color: #fff;
+        }
+
+        #contact .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #contact .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        #contact .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        #contact .social-links img {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) invert(1);
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 10px 5%;
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1002;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .image-overlay span {
+            color: #fff;
+            font-size: 4em;
+            font-weight: bold;
+            line-height: 1;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .project-card:hover .image-overlay,
+        .organization-card:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .contact-gif {
+            width: 100px;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: slideGoomba 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slideGoomba {
+            0% {
+                transform: translateX(-150px);
+            }
+            100% {
+                transform: translateX(150px);
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            #about .about-content {
+                max-width: 1000px;
+            }
+            .text-content {
+                max-width: 900px;
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 899px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            #hero p {
+                font-size: 1em;
+            }
+
+            .hero-text-container {
+                padding: 20px 15px;
+                max-width: 90%;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .hero-text-container p {
+                font-size: 0.95em;
+            }
+
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hamburger-menu {
+                display: block;
+                order: 2;
+                position: static;
+                visibility: visible;
+                left: auto;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: var(--bg-dark);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                border-radius: 0 0 8px 8px;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+                max-height: 0;
+                opacity: 0;
+                pointer-events: none;
+                flex-grow: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: none;
+                overflow-y: auto;
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .nav-links a {
+                margin: 0;
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                text-align: left;
+            }
+
+            .nav-links a:last-child {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            #about .about-content {
+                flex-direction: column;
+                text-align: center;
+                max-width: 90%;
+            }
+            .about-image-wrapper {
+                margin-bottom: 20px;
+            }
+            .text-content {
+                max-width: 100%;
+                padding: 25px;
+            }
+
+            .skills-container {
+                flex-direction: column;
+            }
+
+            .skills-column {
+                width: 100%;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            .organization-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .relawan-grid {
+                padding: 0;
+            }
+
+            .relawan-grid .organization-card {
+                max-width: 100%;
+            }
+
+            .timeline::before {
+                left: 20px;
+                transform: translateX(0);
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 30px;
+            }
+
+            .timeline-item-content {
+                width: calc(100% - 60px);
+                margin-left: 40px !important;
+            }
+
+            .timeline-item-content::after {
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #fff transparent transparent;
+                left: -10px;
+                top: 20px;
+            }
+
+            .timeline-item-marker {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+            .timeline-item.left .timeline-item-marker,
+            .timeline-item.right .timeline-item-marker {
+                transform: translateX(-50%);
+                left: 20px;
+            }
+
+            .cert-image-container {
+                max-width: none;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+                margin-bottom: 40px;
+            }
+            .section-title::after {
+                width: 60px;
+                height: 3px;
+            }
+            .section-title:hover::after {
+                width: 90px;
+            }
+
+            .contact-gif {
+                width: 80px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text-container {
+                padding: 20px 15px;
+            }
+            #hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button class="hamburger-menu" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#organization">Organization</a>
+            <a href="#relawan">Volunteer</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-text-container">
+            <p>Undergraduate student of the Information Systems Study Program at STMIK Triguna Dharma, with a strong interest in business needs analysis, system design documentation, and technical proposal development.</p>
+            <p>Experienced in analyzing user requirements, creating system flowcharts, mockups, and user journeys using tools such as Figma and Draw.io.</p>
+            <p>Skilled in collaborating with developer teams to ensure that application development aligns with business needs and system requirements. Proficient in web development (HTML, CSS, JavaScript, PHP, MySQL and C++) and Microsoft Office tools.</p>
+        </div>
+        <a href="#projects" class="btn">View My Projects</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image-wrapper">
+                <img src="images/fotodiri.png" alt="Siti Noor Shaliha Profile Photo">
+            </div>
+            <div class="text-content">
+                <p>Hello! I am <strong>Siti Noor Shaliha</strong>, an undergraduate student of the Information Systems Study Program at STMIK Triguna Dharma, with a strong interest in business needs analysis, system design documentation, and technical proposal development. I am passionate about helping users solve technical problems, manage end-user devices, and ensure systems run smoothly.</p>
+                <p>Experienced in analyzing user requirements, creating system flowcharts, mockups, and user journeys using tools such as Figma and Draw.io. Skilled in collaborating with developer teams to ensure that application development aligns with business needs and system requirements. Proficient in web development (HTML, CSS, JavaScript, PHP, MySQL and C++) and Microsoft Office tools.</p>
+                <p>With a background in office administration and expertise in digital document management, I am accustomed to working with <strong>detail, systematically, and with high efficiency</strong>. I understand the importance of responsive technical support and effective solutions.</p>
+                <p>I am a <strong>communicative, adaptable, and always ready to collaborate</strong> individual. I possess strong analytical skills to diagnose IT problems, as well as interpersonal skills to provide friendly and clear support to users.</p>
+            </div>
+        </div>
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skills-column">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>System Requirements Analysis</li>
+                    <li>Digital Archive Administration, Documentation & Management</li>
+                    <li>HTML, CSS, JavaScript, PHP, MySQL and C++</li>
+                    <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                    <li>Figma (Wireframing, Mockup, Prototyping)</li>
+                    <li>Flowcharting (Ability to create Flowcharts/Business Processes)</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Attention to Detail </li>
+                    <li>Client-Oriented Mindset</li>
+                    <li>Initiative & Proactive Attitude</li>
+                    <li>Analytical Thinking & Data Analysis</li>
+                    <li>Teamwork & Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>STMIK Triguna Dharma</h3>
+                    <p class="company">S1 Information Systems | GPA: 3.78/4.00</p>
+                    <p class="duration">Oct 2023 – Present</p>
+                    <p>Designed 2 application prototypes (Travel & E-commerce) from needs analysis to UI/UX design.</p>
+                    <p>Develop web applications using HTML, CSS, JS, PHP, and MySQL.</p>
+                    <p>Manage 180 lecturer journals through the OJS system (editing, metadata, and submit).</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h3>SMK Istiqlal</h3>
+                    <p class="company">Office Automation and Governance</p>
+                    <p class="duration">Jul 2019 - June 2022</p>
+                    <p>4-month internship in a government agency, completing 100+ administrative archives.</p>
+                    <p>Corporate Information System Governance Certification by PT. Tractor Nusantara.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/MARKETPLACE.png" alt="Project E-commerce">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Application Prototype Design</h3>
+                    <p>Designed an e-commerce application prototype using Figma, including wireframes, user journey flowcharts, and interactive prototypes with user-centric design standards. Analyzed user needs, determined visual hierarchy, and ensured an optimal user experience at every stage of the user flow. Documented designs and technical specifications for further development.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/JURNAL.jpg" alt="Project Jurnal">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Lecturer Scientific Journal Management</h3>
+                    <p>Acted as part of the lecturer scientific journal management team, responsible for content editing, metadata checking, and submitting articles to the OJS (Open Journal System) in a timely manner and according to publication standards.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image-container">                    <img src="images/TRAVEL.png" alt="Project Travel Online">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Online Travel Application Prototype Design</h3>
+                    <p>Designed an online travel application prototype focusing on a smooth user experience (UX) and attractive user interface (UI), including search, booking, and travel management features. Created wireframes, mockups, and interactive prototypes using Figma.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/yoan.jpg" alt="Empty Slot">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Yoan Griya Batik Visual Identity</h3>
+                    <p>Yoan Griya Batik is a fashion brand that highlights the luxury of batik in a modern visual concept. The logo is designed with the letter "y" as a symbol of resilience, and a floral motif symbolizing beauty, happiness, and purity. Brown color is chosen to create a warm, comfortable, and elegant impression when shopping. This design includes the main logo, packaging (paper bag), business cards, and promotional posters, all packaged in a consistent, professional, and classy visual identity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>Industrial Work Practice (PKL)</h3>
+                    <p class="company"><strong>BPDASHIL WAMPU SEI ULAR</strong> - Administrative Intern Staff</p>
+                    <p class="duration">4 Months</p>
+                    <p>Completed a 4-month internship program at BPDASHIL WAMPU SEI ULAR with an "Excellent" predicate, mastering government agency administration systems and operational data management.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h3>Secretary of Education Division</h3>
+                    <p class="company"><strong>STMIK Triguna Dharma Campus Da'wah Institute</strong></p>
+                    <p class="duration">April 2023 - Present</p>
+                    <p>Arranged the division's work program schedule such as mentoring, regular studies, and training, and ensured their implementation ran according to plan. Coordinated with other administrators to support the implementation of da'wah and education programs based on Islamic values. Assisted in the preparation of modules, study materials, and publication of the division's educational activities to students.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>Member of Infocomm Division</h3>
+                    <p class="company"><strong>Cyber Programming Club STMIK Triguna Dharma</strong></p>
+                    <p class="duration">April 2024 - Present</p>
+                    <p>Assisted in the creation and dissemination of publication content on social media and documentation of internal organizational activities. Learned and contributed to graphic design and visual content creation using CorelDRAW and Canva. Supported the management of the division's internal information systems and participated in the development of basic web programming skills.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h3>Customer Service & Cashier</h3>
+                    <p class="company"><strong>AINI School Uniform Store</strong></p>
+                    <p class="duration">July 2022 - December 2022</p>
+                    <p>Served customers in purchasing school uniforms and other equipment with a friendly and professional attitude. Operated cash registers for cash and non-cash transactions, recorded daily sales, and managed daily financial reports. Provided detailed product information to customers and assisted in selecting uniform sizes/packages as needed.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h3>Operator & Administration Staff</h3>
+                    <p class="company"><strong>Usaha Fotocopy Bersama</strong></p>
+                    <p class="duration">January 2023 - September 2023</p>
+                    <p>Served customer needs in document printing, binding, laminating, and other administrative needs. Operated photocopiers, printers, and computer devices for various document completion. Compiled formal documents according to customer needs, such as official letters, reports, and standard forms. Maintained print quality and document neatness for customer satisfaction.</p>
+                </div>
+                <div class="timeline-item-marker"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organization">
+        <h2 class="section-title">Organizations</h2>
+        <div class="organization-grid">
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/GDG.jpg" alt="DevFest Google Developer Groups 2023">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>DevFest Google Developer Groups 2023</h3>
+                    <p><strong>Participant</strong></p>
+                    <p>Participated as a participant in DevFest Google Developer Groups 2023, an annual conference featuring the latest innovations in Google technology, interacting with experts, and delving into relevant topics.</p>
+                </div>
+            </div>
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/SEMINARLDK.jpg" alt="Seminar Peaching and Technology LDK">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>Peaching and Technology LDK Seminar</h3>
+                    <p><strong>Committee</strong></p>
+                    <p>Contributed as a committee member in organizing the Peaching and Technology LDK Seminar, ensuring the smooth running of the event and supporting the needs of participants and speakers.</p>
+                </div>
+            </div>
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/uiux.jpg" alt="UI/UX Design Class">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>UI/UX Design Class</h3>
+                    <p><strong>Participant</strong></p>
+                    <p>Attended UI/UX design classes to deepen understanding of intuitive user interface design principles and optimal user experience, including the use of Figma.</p>
+                </div>
+            </div>
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/STUDYOUTDOREQC.jpg" alt="Practice English in LauKawar With English Quantum Club">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>Practice English in LauKawar With English Quantum Club</h3>
+                    <p><strong>Participant</strong></p>
+                    <p>Participated in English practice sessions in LauKawar with the English Quantum Club to improve oral communication skills in an interactive and supportive environment.</p>
+                </div>
+            </div>
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/project.png" alt="Learning English Quantum Club in Class">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>Project UI/UX Market Place STMIK Triguna Dharma</h3>
+                    <p><strong>Best Project</strong></p>
+                    <p>A comprehensive project focused on the UI/UX design of the TGD marketplace. This initiative aims to deliver a highly user-friendly and aesthetically pleasing platform that effectively meets the needs and expectations of its target audience.</p>
+                </div>
+            </div>
+            <div class="organization-card">
+                <div class="organization-image-container">
+                    <img src="images/backend.jpg" alt="Class Backend Build With Laravel">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="organization-info">
+                    <h3>Class Backend Build With Laravel</h3>
+                    <p><strong>Participant</strong></p>
+                    <p>Attended backend development classes using Laravel to learn this PHP framework in building efficient and structured web applications, including database and API concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="relawan">
+    <h2 class="section-title">Volunteer</h2>
+    <div class="relawan-grid">
+        <div class="organization-card">
+            <div class="organization-image-container">
+                <img src="images/RELAWAN.jpg" alt="KIP-Kuliah 202iah 2025 Volunteer">
+                <div class="image-overlay">
+                    <span>+</span>
+                </div>
+            </div>
+            <div class="organization-info">
+                <h3>KIP-Kuliah 2025 Volunteer</h3>
+                <p><strong>Education Volunteer at Rumah Tahfidz Al Fazz</strong></p>
+                <p>Acted as a volunteer for the KIP-Kuliah 2025 program, providing guidance and assistance to prospective students in the registration process, fulfilling requirements, and understanding scholarship-related information for higher education.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications & Training</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-image-container">
+                    <img src="images/sertifikasi lsp.jpg" alt="Junior Graphic Design Certificate">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <h3>Junior Graphic Designer</h3>
+                <p class="issuer"><strong>National Professional Certification Agency</strong></p>
+                <p class="date">September 2024 - Present</p>
+                <p class="description">Learned the basics of graphic design using CorelDRAW and Canva, including layout principles, typography, color composition, and branding design. Understood the workflow of a graphic designer, from design brief, concept exploration, to visual artwork execution.</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-image-container">
+                    <img src="images/contentcreatro.jpg" alt="Video Content Creator Certificate">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <h3>Video Content Creator</h3>
+                <p class="issuer"><strong>BBPSDMP Medan</strong></p>
+                <p class="date">21 Oct 2024 - 24 Oct 2024</p>
+                <p class="description">Learned the basic principles of Video Content Creator, including concept creation, planning, production, editing, and publication of video content. Understood the professional workflow stages in the video content production process: from planning to distribution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Connect with Me</h2>
+        <p>Enthusiastic to explore innovative synergies and collaboration opportunities.</p>
+        <div class="contact-info">
+            <img src="images/goomba.gif" alt="Contact Animation" class="contact-gif">
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/siti-noor-shaliha-9370302a7" target="_blank" title="Visit My LinkedIn Profile">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/shaaliha7?igsh=MTlzZDZpbDdwd3M4eg%3D%3D&utm_source=qr" target="_blank" title="Visit My Instagram Profile">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/6282272606909" target="_blank" title="Send WhatsApp Message">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Siti Noor Shaliha. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links a');
+
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close-btn');
+
+            const projectOverlays = document.querySelectorAll('.project-image-container .image-overlay');
+            const certOverlays = document.querySelectorAll('.cert-image-container .image-overlay');
+            const organizationOverlays = document.querySelectorAll('.organization-image-container .image-overlay');
+            
+            const allOverlays = [...projectOverlays, ...certOverlays, ...organizationOverlays].filter(overlay => overlay !== null);
+
+            allOverlays.forEach(overlay => {
+                overlay.addEventListener('click', function() {
+                    const imgElement = this.parentElement.querySelector('img');
+                    if (imgElement) {
+                        lightbox.style.display = 'block';
+                        lightboxImg.src = imgElement.src;
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
