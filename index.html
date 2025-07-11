@@ -222,7 +222,7 @@
             background-color: var(--accent-color);
         }
         
-        #about, #education {
+        #about, #education, #achievements {
             background-color: var(--bg-light);
             padding: 80px 5%;
             display: flex;
@@ -376,7 +376,7 @@
             font-size: 1.1em;
         }
 
-        #projects, #organization, #relawan {
+        #projects, #organization, #relawan, #achievements {
             background-color: #e6f7ff;
             padding: 80px 5%;
         }
@@ -404,18 +404,49 @@
         .relawan-grid {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             margin-top: 40px;
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
             padding: 0 5%;
             box-sizing: border-box;
+            flex-wrap: wrap;
         }
 
         .relawan-grid .organization-card {
             max-width: 380px;
             width: 100%;
+            margin: 0 15px;
+        }
+
+        .achievement-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .achievement-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+            max-width: 45%;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 50px rgba(0,0,0,0.25);
         }
 
         .project-card, .organization-card {
@@ -433,14 +464,14 @@
             box-shadow: 0 18px 50px rgba(0,0,0,0.25);
         }
 
-        .project-image-container, .organization-image-container {
+        .project-image-container, .organization-image-container, .achievement-image-container {
             position: relative;
             width: 100%;
             padding-bottom: 75%;
             overflow: hidden;
         }
 
-        .project-card img, .organization-card img {
+        .project-card img, .organization-card img, .achievement-card img {
             position: absolute;
             top: 0;
             left: 0;
@@ -450,18 +481,18 @@
             display: block;
         }
 
-        .project-info, .organization-info {
+        .project-info, .organization-info, .achievement-info {
             padding: 25px;
         }
 
-        .project-info h3, .organization-info h3 {
+        .project-info h3, .organization-info h3, .achievement-info h3 {
             color: var(--text-dark);
             font-size: 1.5em;
             margin-bottom: 0.3em;
             font-family: 'Poppins', sans-serif;
         }
 
-        .project-info p, .organization-info p {
+        .project-info p, .organization-info p, .achievement-info p {
             font-size: 0.95em;
             color: #555;
             font-family: 'Poppins', sans-serif;
@@ -797,7 +828,8 @@
         }
 
         .project-card:hover .image-overlay,
-        .organization-card:hover .image-overlay {
+        .organization-card:hover .image-overlay,
+        .achievement-card:hover .image-overlay {
             opacity: 1;
         }
 
@@ -945,9 +977,20 @@
             
             .relawan-grid {
                 padding: 0;
+                flex-direction: column;
             }
 
             .relawan-grid .organization-card {
+                max-width: 100%;
+                margin: 15px 0;
+            }
+
+            .achievement-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .achievement-card {
                 max-width: 100%;
             }
 
@@ -1027,6 +1070,7 @@
             <a href="#hero">Home</a>
             <a href="#about">About Me</a>
             <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#organization">Organization</a>
@@ -1114,6 +1158,24 @@
         </div>
     </section>
 
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <div class="achievement-image-container">
+                    <img src="images/pilmapres.jpg" alt="Pilmapres 2025 Campus Representative">
+                    <div class="image-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="achievement-info">
+                    <h3>Business Analyst Project – Pilmapres 2025 Campus Representative</h3>
+                    <p>Selected as the campus representative for Pilmapres (Prestasi Mahasiswa) 2025 by presenting a creative idea titled "Business Analyst Project". This project focused on developing a comprehensive business analysis framework to optimize operational efficiency and strategic decision-making for local SMEs, leveraging data-driven insights and innovative technological solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <h2 class="section-title">Featured Projects</h2>
         <div class="project-grid">
@@ -1192,7 +1254,7 @@
 
             <div class="timeline-item left">
                 <div class="timeline-item-content">
-                    <h3>Member of Infocom Division</h3>
+                    <h3>Member of Infocomm Division</h3>
                     <p class="company"><strong>Cyber Programming Club STMIK Triguna Dharma</strong></p>
                     <p class="duration">April 2024 - Present</p>
                     <p>Assisted in the creation and dissemination of publication content on social media and documentation of internal organizational activities. Learned and contributed to graphic design and visual content creation using CorelDRAW and Canva. Supported the management of the division's internal information systems and participated in the development of basic web programming skills.</p>
@@ -1319,7 +1381,20 @@
             <div class="organization-info">
                 <h3>KIP-Kuliah 2025 Volunteer</h3>
                 <p><strong>Education Volunteer at Rumah Tahfidz Al Fazz</strong></p>
-                <p>Acted as a volunteer for the KIP-Kuliah 2025 program, providing guidance and assistance to prospective students in the registration process, fulfilling requirements, and understanding scholarship-related information for higher education.</p>
+                <p>As a KIP-Kuliah 2025 volunteer, I had the privilege of inspiring and motivating students to pursue higher education. Through dedicated guidance and support, we helped them navigate the scholarship application process, overcome challenges, and envision a brighter future. Our efforts aimed to instill confidence and a passion for learning, empowering young minds to continue their education at university and unlock their full potential.</p>
+            </div>
+        </div>
+        <div class="organization-card">
+            <div class="organization-image-container">
+                <img src="images/PM.jpg" alt="Community Service in Kuta Tualah Village">
+                <div class="image-overlay">
+                    <span>+</span>
+                </div>
+            </div>
+            <div class="organization-info">
+                <h3>Community Service in Kuta Tualah Village, Deli Serdang Regency</h3>
+                <p><strong>Community Empowerment Volunteer</strong></p>
+                <p>Led an innovative community service initiative focused on rebranding home-based tofu products in Kuta Tualah Village, Deli Serdang Regency. This project aimed to uplift local MSMEs by enhancing their product appeal through modern packaging design and optimizing their reach via strategic social media campaigns. Through collaborative workshops and hands-on guidance, we empowered entrepreneurs with essential marketing skills, significantly boosting product visibility and economic impact within the community. This initiative fostered sustainable growth and inspired a new era of local entrepreneurship.</p>
             </div>
         </div>
     </div>
@@ -1408,8 +1483,9 @@
             const projectOverlays = document.querySelectorAll('.project-image-container .image-overlay');
             const certOverlays = document.querySelectorAll('.cert-image-container .image-overlay');
             const organizationOverlays = document.querySelectorAll('.organization-image-container .image-overlay');
+            const achievementOverlays = document.querySelectorAll('.achievement-image-container .image-overlay');
             
-            const allOverlays = [...projectOverlays, ...certOverlays, ...organizationOverlays].filter(overlay => overlay !== null);
+            const allOverlays = [...projectOverlays, ...certOverlays, ...organizationOverlays, ...achievementOverlays].filter(overlay => overlay !== null);
 
             allOverlays.forEach(overlay => {
                 overlay.addEventListener('click', function() {
